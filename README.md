@@ -14,6 +14,20 @@ Este projeto tem como objetivo principal a implementação do método PEWS, uma 
 	
 2) Implementação do PEWS;
 
+## Como rodar o projeto?
+
+### PostgreSQL
+
+1) Será necessário ter instalado em seu computador o SGBD PostgreSQL e ter criado um banco de dados (schema) com nome `neo-adp-project`;
+2) No arquivo `caminho-até-a-pasta-do-projeto/NeoADPproject/NeoADPproject/settings.py` faz-se necessário editar a variável `DATABASES`, colocando nela as informações sobre seu servidor PGSQL, como usuário e senha.
+
+### Python
+1) Será necessário ter instalado em seu computador a linguagem de programação Python 3.12 ou uma versão mais recente;
+2) Será necessário ter instalado em seu computador a framework Django;
+3) É necessário satisfazer todas as dependências para que o projeto funcione, instalando todas as bibliotecas contidas no arquivo `caminho-até-a-pasta-do-projeto/requirements.txt`.
+
+
+
 ## Anotações para os participantes do projeto
 
 ### 07/02/2024 - Juliano
