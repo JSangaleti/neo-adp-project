@@ -4,6 +4,5 @@ from . models import profissional_de_saude
 
 class PDSadmin(admin.ModelAdmin):
     list_display = ('nome', 'crm', 'coren')
-    
 
 admin.site.register(profissional_de_saude, PDSadmin)
