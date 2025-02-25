@@ -15,3 +15,5 @@ class paciente_crianca(models.Model):
     matricula = models.IntegerField()
     nome = models.CharField(max_length=32)
     data_de_nascimento = models.DateField()
+
+
