@@ -15,5 +15,9 @@ class paciente_crianca(models.Model):
     matricula = models.IntegerField()
     nome = models.CharField(max_length=32)
     data_de_nascimento = models.DateField()
-
-
+    
+    
+class responsavel_crianca(models.Model):
+    cpf = models.CharField(primary_key=1, max_length=16)
+    nome = models.CharField(max_length=64)
+    telefone = models.CharField(max_length=16)
