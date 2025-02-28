@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      
+      body {
+        background-color: #e3f2fd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      header,
+      footer {
+        width: 100%;
+        background-color: #1e88e5;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: absolute;
+      }
+      
+      header {
+        top: 0;
+      }
+      
+      footer {
+        bottom: 0;
+      }
+      
+      .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      
+      .login-container input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .login-container button {
+        background-color: #1e88e5;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .login-container button:hover {
+        background-color: #1565c0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>Pontuação de Alerta Precoce Pediátrico</h2>
+    </header>
+    <div class="login-container">
+      <h2>Login do Profissional</h2>
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="cpf" placeholder="CPF (apenas números)" required /> <!-- Use "username" -->
+        <input type="password" name="password" placeholder="Senha" required />
+        <button type="submit">Login</button>
+        {% if error %}
+          <p style="color: red;">{{ error }}</p>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+</html>
